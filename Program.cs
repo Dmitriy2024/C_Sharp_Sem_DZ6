@@ -4,19 +4,28 @@
 //больше 0 ввёл пользователь.
 Console.WriteLine("ВВедите колличество чисел");
 int numbersLength = Convert.ToInt32(Console.ReadLine());
-int[] arrayNumbers = new int[numbersLength]; 
+int[] array = new int[numbersLength]; 
 int sumPositiveNumbers = 0;
+
 
 for(int i =0; i < numbersLength; i++)
 {
    Console.Write("ВВедите  чисел:  ");
-   int numbers  = Convert.ToInt32(Console.ReadLine());
-   if(numbers > 0)
+    int numbers = Convert.ToInt32(Console.ReadLine());
+    array[i] = numbers;
+    Console.WriteLine(numbers);
+   }
+   for(int i =0; i < numbersLength; i++)
+   {
+    if(array[i] > 0)
    {
      sumPositiveNumbers = sumPositiveNumbers + 1;
    }
-}
-Console.Write("Чисел больше 0 = " + sumPositiveNumbers);
+   
+   }
+   Console.Write($"Массив: [{string.Join(";",array)}]");
+Console.WriteLine( "  Чисел больше 0 = " + sumPositiveNumbers);
+
 
 
 /*
