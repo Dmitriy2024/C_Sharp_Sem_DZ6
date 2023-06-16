@@ -1,71 +1,41 @@
-﻿/*
-// напишите программу которая перевернет однамерный массив
-int[] GetArray(int size, int min, int max)
+﻿
+
+//Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел 
+//больше 0 ввёл пользователь.
+Console.WriteLine("ВВедите колличество чисел");
+int numbersLength = Convert.ToInt32(Console.ReadLine());
+int[] arrayNumbers = new int[numbersLength]; 
+int sumPositiveNumbers = 0;
+
+for(int i =0; i < numbersLength; i++)
 {
-    int[] arr = new int [size];
-    for (int i =0; i < size; i++)
-    {
-        arr[i] = new Random().Next(min, max + 1);
-    }
-    return arr;
+   Console.Write("ВВедите  чисел:  ");
+   int numbers  = Convert.ToInt32(Console.ReadLine());
+   if(numbers > 0)
+   {
+     sumPositiveNumbers = sumPositiveNumbers + 1;
+   }
 }
-int[] resultArr = GetArray(10, 0, 10);
-
-Console.Write($"Исходный массив: [{String.Join( " ; ", resultArr)}]");
+Console.Write("Чисел больше 0 = " + sumPositiveNumbers);
 
 
-//
-
-int[] CoryReverseArray (int[] arr)
-{
-    int reversArray = new int[arr.Length];
-    for (int left = 0, right = arr.Length - 1; left < reversArray.Lenght; left++; right--)
-    {
-      CoryReverseArray[left] = arr[right];
-    }
-    return reversArray;
-}
- int [] revers = CoryReverseArray(resultAArray);
-Console.Write($"Перевернутый массив: [{String.Join( " ; ", revers)}]");
-
-int ReverseArray(int[] arr)
-{
-    for(int i = 0;j = arr.Length - 1; i < arr.Lenght / 2; i++)
-    {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-}
-ReversArray(resultArray);
-Console.WriteLine($"Перевернутый массив: [{String.Join("; ", resultArray)}]");
-*/
 /*
-int A = 3;
-int B = 4;
-int C =5;
+int[] Array = new int[M]; 
+int sumGreaterZero = 0;
 
-bool IsTriangle(int a, int b, int c )
+for (int i = 0; i < M; i++)
 {
-    return ((A+B)> C && (B+C)> A && (A + C)> B);
+   if (Array[i] > 0)
+   {
+     sumGreaterZero = sumGreaterZero + Array[i];
+   } 
 }
-if (IsTriangle(A, B, C))
-{
-    Console.WriteLine("ESt");
-}
-    else
-    {
-     
-        Console.WriteLine("Net");
-    }
-   */
+Console.WriteLine(Array + " " + sumGreaterZero + "чисел больше 0");
+*/
 
 
-
-
-
+/*
     //Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных 
-    
     //уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
     Console.Write("Введите b1:");
     double b1 = Convert.ToDouble(Console.ReadLine());
@@ -83,6 +53,6 @@ if (IsTriangle(A, B, C))
     double y = k1*(b2 - b1) / (k1 - k2) + b1;
 
     Console.WriteLine("b1=" + b1 + ";" + "k1=" + k1 + ";" + "b2=" + b2 + ";" + "k2=" + k2 + "  A(" + x + "," + y + ")") ;
-
+*/
 
     
